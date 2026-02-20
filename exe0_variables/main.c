@@ -6,7 +6,7 @@ void foo(int *a) {
 
 void main(void) {
     int a = 0; 
-    int b = 0; 
+    int b; 
 
     while (1) {
         foo(&a);

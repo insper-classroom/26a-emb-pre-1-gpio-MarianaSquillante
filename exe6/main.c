@@ -45,14 +45,12 @@ int main() {
 
     stdio_init_all();
 
-    BUTTON_GPIO = FIRST_GPIO + 7;
 
     gpio_init(BTN_PIN_G);
     gpio_set_dir(BTN_PIN_G, GPIO_IN);
     gpio_pull_up(BTN_PIN_G);
 
-    seven_seg_init();
-    seven_seg_display(2);
+ 
 
     while (true) {
         int btn = gpio_get(BTN_PIN_G);

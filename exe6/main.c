@@ -50,6 +50,9 @@ int main() {
     gpio_set_dir(BTN_PIN_G, GPIO_IN);
     gpio_pull_up(BTN_PIN_G);
 
+    seven_seg_init();
+    seven_seg_display(cnt);
+
  
 
     while (true) {

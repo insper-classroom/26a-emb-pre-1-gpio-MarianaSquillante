@@ -8,9 +8,6 @@ const int LED_PIN_G = 6;
 const int BTN_PIN_R = 28;
 const int BTN_PIN_G = 26;
 
-bool led_r_estado = false;
-bool led_g_estado = false;
-
 int main() {
   stdio_init_all();
 
@@ -27,6 +24,9 @@ int main() {
   gpio_init(BTN_PIN_G);
   gpio_set_dir(BTN_PIN_G, GPIO_IN);
   gpio_pull_up(BTN_PIN_G);
+
+  bool led_r_estado = false;
+  bool led_g_estado = false;
 
   while (true) {
     if (!gpio_get(BTN_PIN_R)) {

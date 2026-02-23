@@ -41,7 +41,7 @@ void seven_seg_display(int cnt) {
 
 int main() {
     int cnt;
-    int last_btn; // Button not pressed (pulled up)
+    int last_btn =1; // Button not pressed (pulled up)
 
     stdio_init_all();
 
@@ -60,8 +60,8 @@ int main() {
             if (++cnt > 9) {
                 cnt = 0;
             }
-            seven_seg_display();
-            printf("cnt: %l\n", cnt);
+            seven_seg_display(cnt);
+            printf("cnt: %d\n", cnt);
         }
         last_btn = btn;
         sleep_ms(10); // Polling interval
